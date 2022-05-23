@@ -1,13 +1,25 @@
-name: Cypress Tests
+name: Cypress CI
 
-on: [push]
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
-  cypress-run:
+  build:
+
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [17.x]
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        
-      - name: Cypress run
-        uses: cypress-io/github-action@v2
+    - uses: actions/checkout@v2
+    - name: Cypress tests using Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm i
+    - run: npm run cypress:run
