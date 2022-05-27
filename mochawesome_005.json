@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2022-05-27T17:14:47.762Z",
-    "end": "2022-05-27T17:14:47.927Z",
-    "duration": 165,
+    "start": "2022-05-27T17:52:09.589Z",
+    "end": "2022-05-27T17:52:09.727Z",
+    "duration": 138,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "4cf017f5-f60c-469b-bbfb-bef6276f7032",
+      "uuid": "1375882c-6ccf-4496-89cb-7aa4fcf1cd6e",
       "title": "",
       "fullFile": "cypress/integration/Usuarios/POSTUsuarios.spec.js",
       "file": "cypress/integration/Usuarios/POSTUsuarios.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "163971a0-b998-43c1-8dfb-b00fa2ad7980",
+          "uuid": "a8060b83-941e-41a6-aa59-c2f9bc194591",
           "title": "Given the Users api",
           "fullFile": "",
           "file": "",
@@ -36,7 +36,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "5bbe0f33-c0fa-4b2f-80ab-9072cb721a92",
+              "uuid": "5a48a4ad-9bbc-4e16-bbb6-e982843da393",
               "title": "When I send POST /usuarios",
               "fullFile": "",
               "file": "",
@@ -47,7 +47,7 @@
                   "title": "Then it should create a new user",
                   "fullTitle": "Given the Users api When I send POST /usuarios Then it should create a new user",
                   "timedOut": null,
-                  "duration": 148,
+                  "duration": 117,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -56,20 +56,20 @@
                   "context": null,
                   "code": "cy.request({\n  method: \"POST\",\n  url: \"/usuarios\",\n  body: fakeUser\n}).should(response => {\n  expect(response.status).eq(201);\n  expect(response.body.message).eq(\"Cadastro realizado com sucesso\");\n});",
                   "err": {},
-                  "uuid": "410e02e0-ce58-4040-9548-a80a1c9d2a08",
-                  "parentUUID": "5bbe0f33-c0fa-4b2f-80ab-9072cb721a92",
+                  "uuid": "cb6f0354-2d93-4062-be8d-533edb1e9c4e",
+                  "parentUUID": "5a48a4ad-9bbc-4e16-bbb6-e982843da393",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "410e02e0-ce58-4040-9548-a80a1c9d2a08"
+                "cb6f0354-2d93-4062-be8d-533edb1e9c4e"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 148,
+              "duration": 117,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
