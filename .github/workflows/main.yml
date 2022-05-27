@@ -8,7 +8,6 @@ on:
   schedule:
     - cron: '*/10 * * * *'
 
-
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
@@ -18,6 +17,8 @@ jobs:
 
       - name: Cypress run
         uses: cypress-io/github-action@v2
+      - run: npm run report:merge
+      - run: npm run report:mocha
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.7
