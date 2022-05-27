@@ -1,0 +1,435 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-05-27T16:59:10.779Z",
+    "end": "2022-05-27T17:00:11.500Z",
+    "duration": 1491,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "fc62445d-8a10-4861-ab35-3ce20fec96b0",
+      "title": "",
+      "fullFile": "cypress/integration/Usuarios/POSTUsuarios.spec.js",
+      "file": "cypress/integration/Usuarios/POSTUsuarios.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "34ee4210-b72d-4e85-a488-2a14e9c161e5",
+          "title": "Given the Users api",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "bb01f7a1-c2ef-4262-9c3d-506874eb8b54",
+              "title": "When I send POST /usuarios",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Then it should create a new user",
+                  "fullTitle": "Given the Users api When I send POST /usuarios Then it should create a new user",
+                  "timedOut": null,
+                  "duration": 247,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.request({\n  method: \"POST\",\n  url: \"/usuarios\",\n  body: fakeUser\n}).should(response => {\n  expect(response.status).eq(201);\n  expect(response.body.message).eq(\"Cadastro realizado com sucesso\");\n});",
+                  "err": {},
+                  "uuid": "69c9c169-0dbb-4935-a455-a4a4cfc53b0c",
+                  "parentUUID": "bb01f7a1-c2ef-4262-9c3d-506874eb8b54",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "69c9c169-0dbb-4935-a455-a4a4cfc53b0c"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 247,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "7aa999ca-a3b8-4f11-a862-3dbb4adcdecc",
+      "title": "",
+      "fullFile": "cypress/integration/Usuarios/GETUsuarios.spec.js",
+      "file": "cypress/integration/Usuarios/GETUsuarios.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6580a229-5112-4b22-a027-678119db3748",
+          "title": "Given the Users api",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "9f778c6a-d9bc-4e01-b441-929d3c830cd6",
+              "title": "When I send GET /usuarios",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Then it should return a list with all registered users",
+                  "fullTitle": "Given the Users api When I send GET /usuarios Then it should return a list with all registered users",
+                  "timedOut": null,
+                  "duration": 321,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.request({\n  method: \"GET\",\n  url: \"/usuarios\"\n}).should(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body.quantidade).to.eq(response.body.usuarios.length);\n  Cypress._.each(response.body.usuarios, usuario => {\n    expect(usuario.email).to.not.be.null;\n    expect(usuario).to.have.all.keys(\"nome\", \"email\", \"password\", \"administrador\", \"_id\");\n  });\n});",
+                  "err": {},
+                  "uuid": "ebee31fc-02b0-4e55-8351-5066d7a31019",
+                  "parentUUID": "9f778c6a-d9bc-4e01-b441-929d3c830cd6",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "ebee31fc-02b0-4e55-8351-5066d7a31019"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 321,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "f298a6fe-c5f7-4702-b14c-db1a88023ab4",
+              "title": "When I send GET /usuarios passing id query param",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Then it should return only the filtered user",
+                  "fullTitle": "Given the Users api When I send GET /usuarios passing id query param Then it should return only the filtered user",
+                  "timedOut": null,
+                  "duration": 173,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.request({\n  method: \"GET\",\n  url: \"/usuarios\",\n  qs: {\n    _id: \"0uxuPY0cbmQhpEz1\"\n  }\n}).should(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body.usuarios[0].nome).to.eq(\"Fulano da Silva\");\n});",
+                  "err": {},
+                  "uuid": "f266faeb-05cf-4e3b-8b58-aab530bdfb1d",
+                  "parentUUID": "f298a6fe-c5f7-4702-b14c-db1a88023ab4",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "f266faeb-05cf-4e3b-8b58-aab530bdfb1d"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 173,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "eaff426d-1f9f-4c62-b0b9-eb117f5d042f",
+      "title": "",
+      "fullFile": "cypress/integration/Usuarios/POSTUsuarios.spec.js",
+      "file": "cypress/integration/Usuarios/POSTUsuarios.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e054d046-17f6-4366-9dd0-b50ed6774261",
+          "title": "Given the Users api",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "ca98d5f1-349c-4555-bef2-8af7b1c27d9e",
+              "title": "When I send POST /usuarios",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Then it should create a new user",
+                  "fullTitle": "Given the Users api When I send POST /usuarios Then it should create a new user",
+                  "timedOut": null,
+                  "duration": 251,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.request({\n  method: \"POST\",\n  url: \"/usuarios\",\n  body: fakeUser\n}).should(response => {\n  expect(response.status).eq(201);\n  expect(response.body.message).eq(\"Cadastro realizado com sucesso\");\n});",
+                  "err": {},
+                  "uuid": "b56fabac-000b-4363-8617-817efc009d25",
+                  "parentUUID": "ca98d5f1-349c-4555-bef2-8af7b1c27d9e",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "b56fabac-000b-4363-8617-817efc009d25"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 251,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "8d79d94b-670a-4566-aac7-c859f2452b43",
+      "title": "",
+      "fullFile": "cypress/integration/Usuarios/GETUsuarios.spec.js",
+      "file": "cypress/integration/Usuarios/GETUsuarios.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5f34d4c9-7f4a-4c71-a2d5-137e44276b6c",
+          "title": "Given the Users api",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "be7c84d7-8212-489e-a94f-f998435b4adb",
+              "title": "When I send GET /usuarios",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Then it should return a list with all registered users",
+                  "fullTitle": "Given the Users api When I send GET /usuarios Then it should return a list with all registered users",
+                  "timedOut": null,
+                  "duration": 324,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.request({\n  method: \"GET\",\n  url: \"/usuarios\"\n}).should(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body.quantidade).to.eq(response.body.usuarios.length);\n  Cypress._.each(response.body.usuarios, usuario => {\n    expect(usuario.email).to.not.be.null;\n    expect(usuario).to.have.all.keys(\"nome\", \"email\", \"password\", \"administrador\", \"_id\");\n  });\n});",
+                  "err": {},
+                  "uuid": "ef799d11-3ef4-4f41-8118-8847080fa966",
+                  "parentUUID": "be7c84d7-8212-489e-a94f-f998435b4adb",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "ef799d11-3ef4-4f41-8118-8847080fa966"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 324,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "48733004-88f2-429a-b5e7-faaf37ed114f",
+              "title": "When I send GET /usuarios passing id query param",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Then it should return only the filtered user",
+                  "fullTitle": "Given the Users api When I send GET /usuarios passing id query param Then it should return only the filtered user",
+                  "timedOut": null,
+                  "duration": 175,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.request({\n  method: \"GET\",\n  url: \"/usuarios\",\n  qs: {\n    _id: \"0uxuPY0cbmQhpEz1\"\n  }\n}).should(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body.usuarios[0].nome).to.eq(\"Fulano da Silva\");\n});",
+                  "err": {},
+                  "uuid": "45bda297-4b98-4dcb-bdc7-39674dd335a4",
+                  "parentUUID": "48733004-88f2-429a-b5e7-faaf37ed114f",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "45bda297-4b98-4dcb-bdc7-39674dd335a4"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 175,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reporterDir": "mochawesome-report",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
