@@ -16,5 +16,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.1.7
         with:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            BRANCH: gh-pages
+            BRANCH: main
             FOLDER: mochawesome-report
