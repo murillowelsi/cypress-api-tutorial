@@ -11,3 +11,10 @@ jobs:
 
       - name: Cypress run
         uses: cypress-io/github-action@v2
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.7
+        with:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            BRANCH: gh-pages
+            FOLDER: mochawesome-report
