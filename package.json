@@ -1,0 +1,33 @@
+{
+  "name": "cypress-api-tutorial",
+  "version": "1.0.0",
+  "description": "Repository created in the article REST API Tests with Cypress",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "npx cypress open",
+    "cy:run": "npx cypress run",
+    "report:merge": "mochawesome-merge > index.json",
+    "report:mocha": "marge index.json",
+    "report:clean": "rimraf mochawesome-report index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/murillowelsi/cypress-api-tutorial.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/murillowelsi/cypress-api-tutorial/issues"
+  },
+  "homepage": "https://github.com/murillowelsi/cypress-api-tutorial#readme",
+  "devDependencies": {
+    "cypress": "^9.7.0",
+    "cypress-multi-reporters": "^1.6.0",
+    "faker": "^5.5.3",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.2.1",
+    "mochawesome-report-generator": "^6.2.0",
+    "rimraf": "^3.0.2"
+  }
+}
