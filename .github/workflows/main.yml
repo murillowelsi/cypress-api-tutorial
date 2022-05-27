@@ -16,11 +16,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Cypress run
-        uses: actions/setup-node@v2
-        with:
-          node-version: 17.x
-      - run: npm i
-      - run: npm run cy:run
+        uses: cypress-io/github-action@v2
       - run: npm run report:merge
       - run: npm run report:mocha
 
