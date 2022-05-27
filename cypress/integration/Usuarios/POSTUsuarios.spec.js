@@ -14,7 +14,7 @@ describe("Given the Users api", () => {
     it("Then it should create a new user", () => {
       cy.request({
         method: "POST",
-        url: "/usuario",
+        url: "/usuarios",
         body: fakeUser,
       }).should((response) => {
         expect(response.status).eq(201);
