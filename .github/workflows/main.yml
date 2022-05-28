@@ -29,5 +29,5 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
-            BRANCH: gh-pages
-            FOLDER: mochawesome-report
+          BRANCH: gh-pages
+          FOLDER: mochawesome-report
