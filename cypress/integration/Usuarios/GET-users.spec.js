@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe("Given the Users api", () => {
+describe("Given the users api", () => {
   context("When I send GET /usuarios", () => {
     it("Then it should return a list with all registered users", () => {
       cy.request({
