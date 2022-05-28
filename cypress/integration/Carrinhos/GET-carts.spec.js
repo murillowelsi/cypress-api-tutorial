@@ -8,7 +8,7 @@ describe("Given the carts api", () => {
         url: "/carrinhos",
       }).should((response) => {
         expect(response.status).to.eq(200);
-        expect(response.body.quantidade).to.eq(response.body.produtos.length);
+        expect(response.body.quantidade).to.eq(response.body.carrinhos.length);
       });
     });
   });
