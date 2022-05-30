@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [ main ]
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '0 0 * * 1'
 
 jobs:
   cypress-run:
@@ -15,7 +15,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Cypress run
+      - name: Cypress run 🧪
         uses: actions/setup-node@v2
         with:
           node-version: 17.x
@@ -25,7 +25,7 @@ jobs:
       - run: npm run report:merge
       - run: npm run report:mocha
 
-      - name: Deploy 🚀
+      - name: Reports deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
             BRANCH: gh-pages
