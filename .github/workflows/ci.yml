@@ -11,3 +11,11 @@ jobs:
 
       - name: Cypress run 🧪
         uses: cypress-io/github-action@v2
+      - run: npm run report:merge
+      - run: npm run report:mocha
+
+      - name: Reports deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4.3.3
+        with:
+            BRANCH: gh-pages
+            FOLDER: mochawesome-report

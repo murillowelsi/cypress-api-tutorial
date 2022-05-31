@@ -2,7 +2,7 @@
 
 describe("Given the products api", () => {
   context("When I send GET /produtos", () => {
-    it.skip("Then it should return a list with all registered products", () => {
+    it("Then it should return a list with all registered products", () => {
       cy.request({
         method: "GET",
         url: "/produtos",
@@ -12,12 +12,11 @@ describe("Given the products api", () => {
 
         Cypress._.each(response.body.produtos, (produto) => {
           expect(produto.email).to.not.be.null;
-          expect(produto).to.have.all.keys(
+          expect(produto).to.contain.keys(
             "nome",
             "preco",
             "descricao",
             "quantidade",
-            "imagem",
             "_id"
           );
         });
