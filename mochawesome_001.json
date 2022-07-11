@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2022-06-27T01:00:25.938Z",
-    "end": "2022-06-27T01:00:26.053Z",
-    "duration": 115,
+    "start": "2022-07-11T00:58:35.346Z",
+    "end": "2022-07-11T00:58:35.472Z",
+    "duration": 126,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "927e9fec-7ee6-4bfb-8369-90194946d895",
+      "uuid": "2b1e2c4a-63ef-40e6-a336-5d915fe9898d",
       "title": "",
       "fullFile": "cypress/integration/Produtos/GET-products.spec.js",
       "file": "cypress/integration/Produtos/GET-products.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "5bf3bd6a-2374-4ac3-9180-8538f5cd7c03",
+          "uuid": "9e56395a-2f5a-4087-a952-de14232e1ff1",
           "title": "Given the products api",
           "fullFile": "",
           "file": "",
@@ -36,7 +36,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "88e54971-055f-4934-b2d8-c9bb9aac5e45",
+              "uuid": "01309980-5132-49e1-b365-3c50669f5b5f",
               "title": "When I send GET /produtos",
               "fullFile": "",
               "file": "",
@@ -47,7 +47,7 @@
                   "title": "Then it should return a list with all registered products",
                   "fullTitle": "Given the products api When I send GET /produtos Then it should return a list with all registered products",
                   "timedOut": null,
-                  "duration": 97,
+                  "duration": 109,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -56,20 +56,20 @@
                   "context": null,
                   "code": "cy.request({\n  method: \"GET\",\n  url: \"/produtos\"\n}).should(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body.quantidade).to.eq(response.body.produtos.length);\n  Cypress._.each(response.body.produtos, produto => {\n    expect(produto.email).to.not.be.null;\n    expect(produto).to.contain.keys(\"nome\", \"preco\", \"descricao\", \"quantidade\", \"_id\");\n  });\n});",
                   "err": {},
-                  "uuid": "3f10ec67-dff1-4b33-ae73-f6e35bda6b1c",
-                  "parentUUID": "88e54971-055f-4934-b2d8-c9bb9aac5e45",
+                  "uuid": "08bdd6f7-72dd-4ed5-8ca7-2b87d7140b2a",
+                  "parentUUID": "01309980-5132-49e1-b365-3c50669f5b5f",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "3f10ec67-dff1-4b33-ae73-f6e35bda6b1c"
+                "08bdd6f7-72dd-4ed5-8ca7-2b87d7140b2a"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 97,
+              "duration": 109,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
