@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2022-07-25T00:58:01.779Z",
-    "end": "2022-07-25T00:58:05.552Z",
-    "duration": 3773,
+    "start": "2022-08-01T01:08:04.173Z",
+    "end": "2022-08-01T01:08:07.989Z",
+    "duration": 3816,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "cb653d11-0fd4-431f-bf00-c59f69d7f59b",
+      "uuid": "ca428fb9-1bd2-498f-916f-33a6fd63a50d",
       "title": "",
       "fullFile": "cypress/integration/Carrinhos/GET-carts.spec.js",
       "file": "cypress/integration/Carrinhos/GET-carts.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "23b13c75-beb2-4ddd-abeb-ab60e3c456b1",
+          "uuid": "aaa5e5a1-690c-4045-b2a5-205df298d358",
           "title": "Given the carts api",
           "fullFile": "",
           "file": "",
@@ -36,7 +36,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "85456164-4a9c-4d30-bd04-fb30d32db4f1",
+              "uuid": "7ec8ae15-4de4-4f96-93e3-1deef973c163",
               "title": "When I send GET /carrinhos",
               "fullFile": "",
               "file": "",
@@ -47,7 +47,7 @@
                   "title": "Then it should return a list with all registered products",
                   "fullTitle": "Given the carts api When I send GET /carrinhos Then it should return a list with all registered products",
                   "timedOut": null,
-                  "duration": 3746,
+                  "duration": 3802,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -56,20 +56,20 @@
                   "context": null,
                   "code": "cy.request({\n  method: \"GET\",\n  url: \"/carrinhos\"\n}).should(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body.quantidade).to.eq(response.body.carrinhos.length);\n});",
                   "err": {},
-                  "uuid": "4ba1146e-d44f-4023-9d73-766bc99f3e34",
-                  "parentUUID": "85456164-4a9c-4d30-bd04-fb30d32db4f1",
+                  "uuid": "1aa345e6-4179-46b5-af35-fabde4d3fd2a",
+                  "parentUUID": "7ec8ae15-4de4-4f96-93e3-1deef973c163",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "4ba1146e-d44f-4023-9d73-766bc99f3e34"
+                "1aa345e6-4179-46b5-af35-fabde4d3fd2a"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 3746,
+              "duration": 3802,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
