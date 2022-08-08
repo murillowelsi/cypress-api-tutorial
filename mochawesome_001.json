@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2022-08-01T01:08:09.025Z",
-    "end": "2022-08-01T01:08:09.145Z",
-    "duration": 120,
+    "start": "2022-08-08T00:55:19.686Z",
+    "end": "2022-08-08T00:55:19.812Z",
+    "duration": 126,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "4b95cd71-ddf6-444e-b816-bf3f536bd201",
+      "uuid": "cd69905f-2b7b-4a21-bbb2-9f482a8309ad",
       "title": "",
       "fullFile": "cypress/integration/Produtos/GET-products.spec.js",
       "file": "cypress/integration/Produtos/GET-products.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "acee45c6-5344-44d7-9074-2b417443f634",
+          "uuid": "23854c37-1c47-4ad0-9fd4-be55b7f8fbe1",
           "title": "Given the products api",
           "fullFile": "",
           "file": "",
@@ -36,7 +36,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "c860f41d-0dc4-4d03-be91-2a200dd6e751",
+              "uuid": "574b9058-9517-44f4-b385-c09c262f439d",
               "title": "When I send GET /produtos",
               "fullFile": "",
               "file": "",
@@ -56,15 +56,15 @@
                   "context": null,
                   "code": "cy.request({\n  method: \"GET\",\n  url: \"/produtos\"\n}).should(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body.quantidade).to.eq(response.body.produtos.length);\n  Cypress._.each(response.body.produtos, produto => {\n    expect(produto.email).to.not.be.null;\n    expect(produto).to.contain.keys(\"nome\", \"preco\", \"descricao\", \"quantidade\", \"_id\");\n  });\n});",
                   "err": {},
-                  "uuid": "09491d02-607a-4e42-95e1-e8c4baa57cf2",
-                  "parentUUID": "c860f41d-0dc4-4d03-be91-2a200dd6e751",
+                  "uuid": "551f5f25-e874-4e73-a7d5-30e4889a0b9d",
+                  "parentUUID": "574b9058-9517-44f4-b385-c09c262f439d",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "09491d02-607a-4e42-95e1-e8c4baa57cf2"
+                "551f5f25-e874-4e73-a7d5-30e4889a0b9d"
               ],
               "failures": [],
               "pending": [],
