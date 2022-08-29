@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2022-08-22T01:00:08.863Z",
-    "end": "2022-08-22T01:00:09.082Z",
-    "duration": 219,
+    "start": "2022-08-29T01:06:39.658Z",
+    "end": "2022-08-29T01:06:39.830Z",
+    "duration": 172,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "694e764e-c97f-4af8-97cc-9877360bb9b4",
+      "uuid": "0fc9fdaf-0c6b-49a4-b553-4b1f0d3c0474",
       "title": "",
       "fullFile": "cypress/integration/Usuarios/GET-users.spec.js",
       "file": "cypress/integration/Usuarios/GET-users.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "5d57bfd0-234f-4c8c-9fb8-20e3c5a53bb4",
+          "uuid": "baaee978-368a-4db2-bccd-58ae070145c3",
           "title": "Given the users api",
           "fullFile": "",
           "file": "",
@@ -36,7 +36,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "a50e1419-23ab-45c8-85d1-31324ed94a7f",
+              "uuid": "43cf5b9b-2687-4d95-8333-05c525ecfac0",
               "title": "When I send GET /usuarios",
               "fullFile": "",
               "file": "",
@@ -47,7 +47,7 @@
                   "title": "Then it should return a list with all registered users",
                   "fullTitle": "Given the users api When I send GET /usuarios Then it should return a list with all registered users",
                   "timedOut": null,
-                  "duration": 113,
+                  "duration": 86,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -56,26 +56,26 @@
                   "context": null,
                   "code": "cy.request({\n  method: \"GET\",\n  url: \"/usuarios\"\n}).should(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body.quantidade).to.eq(response.body.usuarios.length);\n  Cypress._.each(response.body.usuarios, usuario => {\n    expect(usuario.email).to.not.be.null;\n    expect(usuario).to.have.all.keys(\"nome\", \"email\", \"password\", \"administrador\", \"_id\");\n  });\n});",
                   "err": {},
-                  "uuid": "b0018a27-dc6f-4245-b94e-d15b6762ca55",
-                  "parentUUID": "a50e1419-23ab-45c8-85d1-31324ed94a7f",
+                  "uuid": "7ca30903-af4e-44c8-a6fb-b9c5ef6217f8",
+                  "parentUUID": "43cf5b9b-2687-4d95-8333-05c525ecfac0",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "b0018a27-dc6f-4245-b94e-d15b6762ca55"
+                "7ca30903-af4e-44c8-a6fb-b9c5ef6217f8"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 113,
+              "duration": 86,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "c33fb76a-0007-4071-ad09-74116225189c",
+              "uuid": "3c1fda60-930e-43b6-b3e2-b3f4106769f8",
               "title": "When I send GET /usuarios passing id query param",
               "fullFile": "",
               "file": "",
@@ -86,7 +86,7 @@
                   "title": "Then it should return only the filtered user",
                   "fullTitle": "Given the users api When I send GET /usuarios passing id query param Then it should return only the filtered user",
                   "timedOut": null,
-                  "duration": 90,
+                  "duration": 66,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -95,20 +95,20 @@
                   "context": null,
                   "code": "cy.request({\n  method: \"GET\",\n  url: \"/usuarios\",\n  qs: {\n    _id: \"0uxuPY0cbmQhpEz1\"\n  }\n}).should(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body.usuarios[0].nome).to.eq(\"Fulano da Silva\");\n});",
                   "err": {},
-                  "uuid": "83a97093-6b96-478a-90ab-3b760bfd880e",
-                  "parentUUID": "c33fb76a-0007-4071-ad09-74116225189c",
+                  "uuid": "5418b048-2bc3-4d39-be27-747bdfbdf6bb",
+                  "parentUUID": "3c1fda60-930e-43b6-b3e2-b3f4106769f8",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "83a97093-6b96-478a-90ab-3b760bfd880e"
+                "5418b048-2bc3-4d39-be27-747bdfbdf6bb"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 90,
+              "duration": 66,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
