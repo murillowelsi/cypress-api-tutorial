@@ -3,7 +3,7 @@
 describe("Given the products api", () => {
   context("When I send GET /produtos", () => {
     it("Then it should return a list with all registered products", () => {
-      cy.request({
+      cy.api({
         method: "GET",
         url: "/produtos",
       }).should((response) => {

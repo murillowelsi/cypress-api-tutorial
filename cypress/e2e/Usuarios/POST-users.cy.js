@@ -12,7 +12,7 @@ describe("Given the Users api", () => {
 
   context("When I send POST /usuarios", () => {
     it("Then it should create a new user", () => {
-      cy.request({
+      cy.api({
         method: "POST",
         url: "/usuarios",
         body: fakeUser,

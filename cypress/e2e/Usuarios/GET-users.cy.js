@@ -3,7 +3,7 @@
 describe("Given the users api", () => {
   context("When I send GET /usuarios", () => {
     it("Then it should return a list with all registered users", () => {
-      cy.request({
+      cy.api({
         method: "GET",
         url: "/usuarios",
       }).should((response) => {
@@ -26,7 +26,7 @@ describe("Given the users api", () => {
 
   context("When I send GET /usuarios passing id query param", () => {
     it("Then it should return only the filtered user", () => {
-      cy.request({
+      cy.api({
         method: "GET",
         url: "/usuarios",
         qs: {

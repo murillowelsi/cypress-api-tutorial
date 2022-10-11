@@ -22,12 +22,15 @@
   },
   "homepage": "https://github.com/murillowelsi/cypress-api-tutorial#readme",
   "devDependencies": {
-    "cypress": "^9.7.0",
     "cypress-multi-reporters": "^1.6.0",
     "faker": "^5.5.3",
     "mochawesome": "^7.1.3",
     "mochawesome-merge": "^4.2.1",
     "mochawesome-report-generator": "^6.2.0",
     "rimraf": "^3.0.2"
+  },
+  "dependencies": {
+    "cypress": "^10.9.0",
+    "cypress-plugin-api": "^1.2.3"
   }
 }
