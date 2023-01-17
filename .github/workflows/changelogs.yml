@@ -1,0 +1,27 @@
+ name: Generate CHANGELOG
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  generate_changelog:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Generate CHANGELOG
+      run: |
+        git log --pretty=format:'%h %s' --no-merges $(git describe --tags --abbrev=0)..HEAD > CHANGELOG.md
+
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add CHANGELOG.md
+        git commit -m "Update CHANGELOG"
+        git push origin main
+
