@@ -1,4 +1,4 @@
- name: Generate CHANGELOG
+name: Generate CHANGELOG
 
 on:
   push:
