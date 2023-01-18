@@ -23,3 +23,11 @@ jobs:
         PATH: 'CHANGELOG.md'
         COMMIT_MESSAGE: 'docs(changelog): update release notes'
         TYPE: 'feat:Feature,fix:Bug Fixes,docs:Documentation,refactor:Refactor,perf:Performance Improvements'
+
+    - name: Update gh-pages
+      run: |
+        git checkout gh-pages
+        git pull origin gh-pages
+        git add CHANGELOG.md
+        git commit -m "Update CHANGELOG"
+        git push origin gh-pages
